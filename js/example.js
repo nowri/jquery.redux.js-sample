@@ -30,7 +30,7 @@ $(function() {
     var $App = $("#root");
     CounterTemp = _.template($("#counter").html());
     $App
-        .redux("on")
+        .redux("on")//jQueryオブジェクトとreduxを紐付ける
         .on("reduxChange", onReduxChange)
         .click("button", function() {
             $App.trigger("redux:increaseAction", []);
